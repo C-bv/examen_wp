@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+
+    header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        z-index: 2;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            a:not(.logo) {
+                color: #fff;
+                text-decoration: none;
+                padding-top: .5em;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom 0.2s ease-in-out;
+
+                &:hover {
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    main {
+        position: relative;
+
+        #landingPage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: calc(100vh - 50px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("./assets/mars.jpg");
+            padding: 1rem;
+
+            #landingText{
+                align-self: baseline;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2em;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        #rockets {
+            height: calc(100vh - 50px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 1rem;
+            background-image: url("./assets/dragon.webp");
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1em 0;
+        width: 100%;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding-top: .5em;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s ease-in-out;
+
+            &:hover {
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+}

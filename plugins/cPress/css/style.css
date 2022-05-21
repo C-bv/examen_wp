@@ -1,0 +1,94 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rocketCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: #fff;
+    font-family: monospace;
+}
+
+#commands{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.rocketCard {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.rocketCardBody {
+    display: flex;
+    gap: 2em;
+}
+
+.cardLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.rocketCardImageContainer {
+    position: relative;
+    height: 230px;
+    width: fit-content;
+    padding: .5em;
+}
+
+.rocketImg {
+    position: relative;
+    object-fit: cover;
+    border-radius: 2px;
+    height: 230px;
+    width: 282px;
+    z-index: 2;
+}
+
+.rocketImgAfter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+}
+
+.cardRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rocketCardDetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5em;
+}
+
+.link{
+    font-weight: bold;
+    align-self: center;
+    text-decoration: none;
+    color: #fff;
+}
