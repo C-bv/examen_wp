@@ -1,10 +1,28 @@
+@font-face {
+    font-family: D-DIN;
+    src: url(./assets/fonts/D-DIN.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
 body {
-    font-family: monospace;
+    font-family: D-DIN, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
@@ -27,6 +45,7 @@ body {
         nav {
             display: flex;
             align-items: center;
+            gap: 1em;
 
             a:not(.logo) {
                 color: #fff;
@@ -48,22 +67,23 @@ body {
     main {
         position: relative;
 
-        #landingPage {
+        section {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-end;
             height: calc(100vh - 50px);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-image: url("./assets/mars.jpg");
             padding: 1rem;
 
-            #landingText{
-                align-self: baseline;
+            >:nth-child(1) {
+                margin-bottom: 1rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: flex-end;
                 padding: 2em;
 
                 h1 {
@@ -71,16 +91,82 @@ body {
                     font-weight: bold;
                     text-transform: uppercase;
                 }
+
+                h2 {
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+            }
+
+            #learnMore {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-decoration: none;
+                text-align: center;
+                text-transform: uppercase;
+                height: 50px;
+                min-width: 130px;
+                padding: 0 15px;
+                margin: 30px 0 0;
+                border: 2px solid #fff;
+                color: #fff;
+                transition: color .5s cubic-bezier(.19,1,.22,1);
+
+                &:hover {
+                    background-color: #fff;
+                    color: #181a1b;
+                }
+            }
+        }
+
+        #landingPage {
+            background-image: url("./assets/mars.jpg");
+
+            #landingText {
+                align-self: baseline;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2em;
+            }
+        }
+
+        #moonSection {
+            background-image: url("./assets/moon.jpg");
+
+            #moonMission {
+                align-self: end;
+            }
+
+        }
+
+        #issSection {
+            background-image: url("./assets/iss.jpg");
+
+            >#issMission {
+                align-self: flex-start;
+                align-items: flex-start;
+            }
+
+            .imgSlider {
+                padding: 1em;
+                border-radius: 2px;
+
+                img {
+                    backdrop-filter: blur(10px);
+                    border-radius: 2px;
+                }
             }
         }
 
         #rockets {
-            height: calc(100vh - 50px);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 1rem;
             background-image: url("./assets/dragon.webp");
+
+            >div {
+                align-items: center;
+            }
         }
     }
 

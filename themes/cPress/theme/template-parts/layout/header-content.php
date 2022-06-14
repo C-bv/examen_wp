@@ -6,6 +6,8 @@
                 <path d="M397.5 0c-80 4.6-117 38.8-125.3 46.9l-1.7 1.6h14.8C325.3 8.4 382.8 1.3 397.5 0z" />
             </svg>
         </a>
+        <a href="#moonSection">Mission</a>
+        <a href="#issSection">Transportation</a>
         <a href="#rockets">Rockets</a>
     </nav>
 </header>
